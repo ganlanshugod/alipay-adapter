@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+ 	<parent>
+ 		<groupId>org.bana</groupId>
+ 		<artifactId>alipay-adapter</artifactId>
+ 		<version>0.4.1-SNAPSHOT</version>
+ 		<relativePath>../pom.xml</relativePath>
+ 	</parent>
+	<artifactId>alipay-client</artifactId>
+	<name>alipay-client</name> 
+	<description>alipay-客户端的统一工具类</description>
+
+	<dependencies>
+		<!-- *********************************************************** -->
+
+		<!-- *********************************************************** -->
+		<!-- ========begin======系统正式运行需要的jar报配置依赖====begin========== -->
+		<!-- *********************************************************** -->
+		<dependency>
+			<groupId>com.alipay.sdk</groupId>
+			<artifactId>alipay-sdk-java</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		
+		<!-- *********************************************************** -->
+		<!-- ========end======系统正式运行需要的jar报配置依赖====end========== -->
+		<!-- *********************************************************** -->
+
+		<!-- *********************************************************** -->
+		<!-- ========begin==========测试级别的依赖配置========begin========== -->
+		<!-- *********************************************************** -->
+		<!-- junit 测试依赖 begin -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- junit 测试依赖 end -->
+		<!-- *********************************************************** -->
+		<!-- ========end==========测试级别的依赖配置========end========== -->
+		<!-- *********************************************************** -->
+	</dependencies>
+</project>
