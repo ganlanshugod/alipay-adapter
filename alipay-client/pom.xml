@@ -5,7 +5,7 @@
  	<parent>
  		<groupId>org.bana</groupId>
  		<artifactId>alipay-adapter</artifactId>
- 		<version>0.4.1-SNAPSHOT</version>
+ 		<version>0.6.0-SNAPSHOT</version>
  		<relativePath>../pom.xml</relativePath>
  	</parent>
 	<artifactId>alipay-client</artifactId>

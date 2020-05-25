@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.bana</groupId>
 	<artifactId>alipay-adapter</artifactId>
-	<version>0.4.1-SNAPSHOT</version>
+	<version>0.6.0-SNAPSHOT</version>
 	<name>alipay-parent</name>
 	<packaging>pom</packaging>
 	<description>alipay-parent</description>
