@@ -5,7 +5,7 @@
 	<groupId>org.bana</groupId>
 	<artifactId>alipay-adapter</artifactId>
 	<version>0.4.1-SNAPSHOT</version>
-	<name>-parent</name>
+	<name>alipay-parent</name>
 	<packaging>pom</packaging>
 	<description>alipay-parent</description>
 
@@ -19,7 +19,6 @@
 	</properties>
 
 	<modules>
-		<module>alipay-common</module>
 		<module>alipay-client</module>
 	</modules>
 
@@ -42,17 +41,7 @@
 			<!-- =======================alipay 的统一工具类 begin ================= -->
 			<dependency>
 				<groupId>org.bana</groupId>
-				<artifactId>alipay-common</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.bana</groupId>
-				<artifactId>alipay-cp-client</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.bana</groupId>
-				<artifactId>alipay-mp-client</artifactId>
+				<artifactId>alipay-client</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<!-- =======================alipay 的统一工具类end ================= -->

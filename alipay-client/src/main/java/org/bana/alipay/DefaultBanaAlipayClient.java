@@ -46,10 +46,10 @@ public class DefaultBanaAlipayClient extends DefaultAlipayClient {
 	
 	
 	@Override
-	public <T extends AlipayResponse> T execute(AlipayRequest<T> request) throws AlipayApiException {
-		LOG.info("请求参数"+request.getTextParams());
+	public <T extends AlipayResponse> T execute(AlipayRequest<T> request, String accessToken) throws AlipayApiException {
+		LOG.info("请求参数"+request.getTextParams()+"; token = " + accessToken);
 		try {
-			T response = super.execute(request);
+			T response = super.execute(request,accessToken);
 			LOG.info("请求是否成功" + response.isSuccess());
 			LOG.info("返回结果"+response.getBody());
 			return response;
@@ -59,6 +59,12 @@ public class DefaultBanaAlipayClient extends DefaultAlipayClient {
 			throw e;
 		}
 		
+	}
+	
+	@Override
+	public <T extends AlipayResponse> T execute(AlipayRequest<T> request)
+			throws AlipayApiException {
+		return this.execute(request, null);
 	}
 
 }

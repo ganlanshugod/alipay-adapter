@@ -14,7 +14,7 @@ public class TestUserInfo extends ClientTest{
 	public void testGetToken() throws AlipayApiException {
 //		alipay.system.oauth.token
 		AlipaySystemOauthTokenRequest request = new AlipaySystemOauthTokenRequest();
-		request.setCode("90d2714540454c898c43133fa3caXB86");
+		request.setCode("1e4d257604d5434c8d8301ceeaaeZX86");
 		request.setGrantType("authorization_code");
 		AlipaySystemOauthTokenResponse response = alipayClient.execute(request);
 		response.getAccessToken();
@@ -26,7 +26,8 @@ public class TestUserInfo extends ClientTest{
 	@Test
 	public void test() throws AlipayApiException {
 		AlipayUserInfoShareRequest request = new AlipayUserInfoShareRequest();
-		AlipayUserInfoShareResponse response = alipayClient.execute(request);
+		String token = "";
+		AlipayUserInfoShareResponse response = alipayClient.execute(request,token);
 		if(response.isSuccess()){
 		System.out.println("调用成功");
 		} else {
