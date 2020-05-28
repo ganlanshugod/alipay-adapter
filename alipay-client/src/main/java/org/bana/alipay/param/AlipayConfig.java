@@ -44,33 +44,18 @@ public class AlipayConfig implements Serializable {
 	/** 
 	* <p>Description: </p> 
 	* @author ChuLinpeng   
-	* @date 2020年5月26日 上午10:00:36 
-	* @param appId
-	* @param publicKey
-	* @param privateKey 
-	*/ 
-	public AlipayConfig(String appId, String publicKey, String privateKey) {
-		super();
-		this.appId = appId;
-		this.publicKey = publicKey;
-		this.privateKey = privateKey;
-	}
-	
-	/** 
-	* <p>Description: </p> 
-	* @author ChuLinpeng   
 	* @date 2020年5月26日 上午10:00:39 
 	* @param appId
 	* @param publicKey
 	* @param privateKey
 	* @param aliPublicKey 
 	*/ 
-	public AlipayConfig(String appId, String publicKey, String privateKey, String aliPublicKey) {
+	public AlipayConfig(String appId, String publicKey, String aliPublicKey, String privateKey) {
 		super();
 		this.appId = appId;
 		this.publicKey = publicKey;
-		this.privateKey = privateKey;
 		this.aliPublicKey = aliPublicKey;
+		this.privateKey = privateKey;
 	}
 	
 	public String getUrl() {

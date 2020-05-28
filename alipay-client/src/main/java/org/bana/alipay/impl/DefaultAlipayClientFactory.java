@@ -34,7 +34,8 @@ public class DefaultAlipayClientFactory implements AlipayClientFactory{
 	}
 	
 	private AlipayClient instance(AlipayConfig config) {
-		return new DefaultBanaAlipayClient(config.getUrl(),
+		return new DefaultBanaAlipayClient(
+				config.getUrl(),
 				config.getAppId(),
 				config.getPrivateKey(),
 				config.getFormat(),
