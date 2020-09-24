@@ -45,7 +45,7 @@ public class DefaultAlipayClientCache implements AlipayClientCache {
 		if (clientEffectiveTime != null && clientEffectiveTime.intValue() > 0) {
 			this.clientEffectiveTime = clientEffectiveTime;
 		}
-		LOG.info("当前AlipayClient在内存中的有效时间为：" + clientEffectiveTime + "毫秒");
+		LOG.info("当前AlipayClient在内存中的有效时间为：" + this.clientEffectiveTime + "毫秒");
 	}
 
 	/**
