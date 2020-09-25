@@ -75,13 +75,16 @@ public class DefaultAlipayClientCache implements AlipayClientCache {
 	@Override
 	public AlipayClient get(String appId) {
 		Map<String, Object> valMap = cacheMap.get(appId);
-		Date saveDate = (Date)valMap.get(DATE_KEY);
-		Date now = new Date();
-		// 若超过有效时间，则返回null
-		if (now.getTime() - saveDate.getTime() > clientEffectiveTime) {
-			return null;
+		if (valMap != null && !valMap.isEmpty()) {
+			Date saveDate = (Date)valMap.get(DATE_KEY);
+			Date now = new Date();
+			// 若超过有效时间，则返回null
+			if (now.getTime() - saveDate.getTime() > clientEffectiveTime) {
+				return null;
+			}
+			return (AlipayClient)valMap.get(CLIENT_KEY);
 		}
-		return (AlipayClient)valMap.get(CLIENT_KEY);
+		return null;
 	}
 
 }
